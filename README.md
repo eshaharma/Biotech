@@ -72,7 +72,10 @@ A simple desktop-based Student Management System built using Java Swing. This GU
 
 ## 📸 Screenshots
 
-*Add screenshots of the UI here if needed.*
+![image (1)](https://github.com/user-attachments/assets/9597434c-fa39-4fcc-b980-5fe339ad1faa)
+
+![image](https://github.com/user-attachments/assets/93af0eaf-5ba3-4c4a-ab4c-50ace8a566eb)
+
 
 ---
 
@@ -81,5 +84,3 @@ A simple desktop-based Student Management System built using Java Swing. This GU
 This project is open-source and free to use for educational purposes.
 
 ---
-
-Let me know if you want a Hindi version, feature enhancements, or screenshot templates!
