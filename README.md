@@ -1,4 +1,3 @@
-Here's a clean and informative **README** snippet you can copy-paste into your GitHub repository:
 
 ---
 
