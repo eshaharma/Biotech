@@ -1,0 +1,24 @@
+# Java compiled class files
+*.class
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+out/
+
+# NetBeans
+nbproject/private/
+build/
+
+# Eclipse
+.settings/
+.classpath
+.project
+bin/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Application data
+students.dat
