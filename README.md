@@ -184,6 +184,11 @@ Once running, you'll have a working Student Management System where you can:
 ## 📸 Screenshots
 
 
+![image (1)](https://github.com/user-attachments/assets/b92516c0-401c-4dd4-95b3-2e791b1d7483)
+
+
+![Screenshot 2025-05-21 092931](https://github.com/user-attachments/assets/adae600d-e94f-4ba9-b95e-ffc93f935ab7)
+
 
 ---
 
