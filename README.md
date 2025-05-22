@@ -1,168 +1,155 @@
+# 🧑‍🎓 Student Management System (Java Swing + MySQL)
 
----
-
-# 🧑‍🎓 Student Management System (Java Swing)
-
-A simple desktop-based Student Management System built using Java Swing. This GUI application allows teachers to manage student records with name, roll number, and subject-wise grades for Maths, Physics, and Chemistry.
+A simple, desktop-based Student Management System built using Java Swing. This GUI application allows teachers to manage student records (name, roll number, subject-wise grades for Maths, Physics, and Chemistry) using a MySQL backend.
 
 ---
 
 ## 💡 Features
 
-* Role-based access:
-
-  * **Teacher mode**: Add, edit, delete, save, and load student records.
-  * **Student mode**: View-only access to student records.
-* Secure access for teachers (admin credentials: `admin` / `1234`)
-* Subject-wise grade entry and display
-* Persistent data storage using object serialization (`students.dat`)
-* Simple, user-friendly graphical interface
+- Role-based access:
+  - **Teacher mode**: Add, edit, delete, save, and load student records.
+  - **Student mode**: View-only access to student records.
+- Secure login for teachers (admin credentials: `admin` / `1234`)
+- Subject-wise marks entry and display
+- Persistent data storage using **MySQL Database**
+- User-friendly GUI using **Java Swing**
+- Automatically creates the required **database and table** on first run
 
 ---
 
 ## 🛠️ Technologies Used
 
-* Java SE (Swing for GUI)
-* Object Serialization for file storage
-* Java Collections (`ArrayList`, `HashMap`)
+- Java SE (JDK 8+)
+- Swing (Java GUI)
+- MySQL
+- JDBC (MySQL Connector)
+- Java Collections (`ArrayList`, `HashMap`)
 
 ---
 
 ## 🚀 How to Run
 
-To **run this Java Swing + MySQL-based Student Management System GUI** on your PC, follow this **step-by-step setup** process:
+Follow this **step-by-step guide** to set up and run the project on your local machine.
 
 ---
 
-### ✅ **Step 1: Install Required Software**
+### ✅ Step 1: Prerequisites
 
-1. **Install Java Development Kit (JDK)**
+Make sure the following software is installed:
 
-   * Download & install [JDK](https://www.oracle.com/java/technologies/javase-downloads.html) (preferably Java 8 or later).
-   * Set up `JAVA_HOME` and add JDK's `bin` folder to your system `PATH`.
+1. **Java Development Kit (JDK)**  
+   - Download from: [Oracle JDK Downloads](https://www.oracle.com/java/technologies/javase-downloads.html)  
+   - Set environment variables (`JAVA_HOME`, add `bin` to `PATH`)
 
-2. **Install an IDE (Optional but Recommended)**
+2. **MySQL Server**  
+   - Download from: [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)  
+   - Remember the root password during installation  
+   - Start MySQL via CLI or MySQL Workbench
 
-   * Use [IntelliJ IDEA](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/), or [NetBeans](https://netbeans.apache.org/) for easy development.
+3. **MySQL JDBC Driver (mysql-connector-java)**  
+   - Download from: [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/)  
+   - Add the `.jar` to your project libraries in your IDE
 
-3. **Install MySQL Server**
-
-   * Download & install [MySQL Community Edition](https://dev.mysql.com/downloads/mysql/).
-   * During setup, **note the root password** you set (you’ll need this later).
-   * Start MySQL Server using the MySQL Workbench or command-line tools.
+4. **IDE (Optional but recommended)**  
+   - IntelliJ IDEA / Eclipse / NetBeans for development and execution
 
 ---
 
-### ✅ **Step 2: Create MySQL Database**
+### ✅ Step 2: MySQL Database Setup
 
-1. Open **MySQL Workbench** or command-line terminal and run:
+#### 🔸 Option 1: Auto-Creation on First Run
+
+The Java code will **automatically create the database and table** if they don’t exist.
+
+#### 🔸 Option 2: Manual Creation (Optional)
+
+Alternatively, you can run the provided SQL script manually:
 
 ```sql
-CREATE DATABASE student_db;
+-- Creates database and students table
+CREATE DATABASE IF NOT EXISTS student_db;
 USE student_db;
-```
 
-> ⚠️ No need to create tables manually — the code auto-generates them when it first runs.
+CREATE TABLE IF NOT EXISTS students (
+    rollNo VARCHAR(20) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    mathMarks INT DEFAULT 0,
+    physicsMarks INT DEFAULT 0,
+    chemistryMarks INT DEFAULT 0
+);
+````
 
----
-
-### ✅ **Step 3: Setup JDBC Driver**
-
-1. Download the **MySQL JDBC driver** (`mysql-connector-java`):
-
-   * Get it from: [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
-
-2. **Add JDBC driver to your project**:
-
-   * **In IntelliJ**: File > Project Structure > Libraries > + Add the `.jar` file.
-   * **In Eclipse**: Right-click project > Build Path > Configure Build Path > Add External JARs > Select `.jar`.
+> 🔖 File also located in and as `sql/init.sql` 
 
 ---
 
-### ✅ **Step 4: Create Your Java File**
+### ✅ Step 3: Project Setup
 
-1. Copy the full Java code into a file called:
-   `StudentManagementSystem.java`
+1. **Download the MySQL JDBC driver** `.jar` file.
+2. Add it to your classpath:
 
-2. Make sure it's in a folder on your system. This file contains everything (GUI, model, database operations).
+   * In IntelliJ: File > Project Structure > Libraries > Add `.jar`
+   * In Eclipse: Build Path > Add External JARs > Select `.jar`
 
 ---
 
-### ✅ **Step 5: Update Database Credentials in Code**
+### ✅ Step 4: Modify DB Credentials
 
-In the `StudentDAO` class, change:
+Open `StudentDAO.java` and update the following with your **MySQL credentials**:
 
 ```java
 private static final String USER = "root";
-private static final String PASSWORD = "password"; // change this
+private static final String PASSWORD = "your_mysql_password"; // 🔁 Replace this with your password
 ```
 
-➡️ Replace `"password"` with **your actual MySQL root password**.
+> 💡 Default database name is: `student_db`
 
 ---
 
-### ✅ **Step 6: Compile & Run**
+### ✅ Step 5: Compile & Run
 
-If you're using an IDE:
+#### Using an IDE:
 
-* Just **click Run** or use the green arrow button.
+* Open project in IntelliJ or Eclipse
+* Click **Run**
 
-If you're using command line:
-
-1. Navigate to your `.java` file directory.
-2. Compile it:
+#### Using Command Line:
 
 ```bash
-javac -cp .;mysql-connector-java-<version>.jar StudentManagementSystem.java
+javac -cp .;mysql-connector-java-<version>.jar src/StudentManagementSystem.java
+java -cp .;mysql-connector-java-<version>.jar src.StudentManagementSystem
 ```
 
-> Replace `<version>` with the actual JDBC jar version (e.g., `mysql-connector-java-8.0.33.jar`).
-
-3. Run it:
-
-```bash
-java -cp .;mysql-connector-java-<version>.jar StudentManagementSystem
-```
+> Replace `<version>` with your actual `.jar` file version
+> Use `:` instead of `;` on macOS/Linux
 
 ---
 
-### ✅ **Step 7: First Launch**
+### ✅ Step 6: First Launch
 
-* When you run the program:
+* App asks: **"Are you a teacher or student?"**
+* If **teacher**, enter credentials:
 
-  * It will prompt: *“Are you a teacher or student?”*
-  * If **teacher**, enter:
-
-    * Username: `admin`
-    * Password: `1234`
-  * If credentials are wrong, it defaults to student mode (read-only).
-
----
-
-### ✅ **Troubleshooting Tips**
-
-* **JDBC Error**? Ensure JDBC jar is in classpath.
-* **Access Denied (SQL)**? Check MySQL username/password.
-* **"Table doesn't exist" error**? Try deleting and re-running the DB initialization.
-* **GUI not showing up**? Make sure `setVisible(true);` is called (it's there in your code implicitly via `JFrame` constructor).
-
----
-
-### 🎉 You're Ready!
-
-Once running, you'll have a working Student Management System where you can:
-
-* Add/edit/delete student records
-* Store subject grades
-* Store data persistently using MySQL backend
+  * Username: `admin`
+  * Password: `1234`
+* Invalid credentials switch to student (read-only) mode
 
 ---
 
 ## 📂 File Structure
 
 ```
-├── StudentManagementSystem.java
-└── students.dat   # (auto-generated after saving data)
+student-management-system-java/
+│
+├── src/
+│   ├── Student.java
+│   └── StudentManagementSystem.java
+│
+├── sql/
+│   └── init.sql       # MySQL script (optional)
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -176,24 +163,32 @@ Once running, you'll have a working Student Management System where you can:
 
 ## 📌 Notes
 
-* In **student mode**, all edit-related buttons and fields are disabled.
-* The student list and data are saved in a file named `students.dat` in the project directory.
+* **Student Mode:** All edit options are disabled (view-only)
+* The program uses **MySQL** for persistent storage — no `.dat` files
+* Table and database creation is handled via code — manual setup optional
 
 ---
 
 ## 📸 Screenshots
 
 
-![image (1)](https://github.com/user-attachments/assets/b92516c0-401c-4dd4-95b3-2e791b1d7483)
+![image (1)](https://github.com/user-attachments/assets/6c35f3d4-cc9f-47c7-91b1-d7fe2805bfc2)
 
 
-![Screenshot 2025-05-21 092931](https://github.com/user-attachments/assets/adae600d-e94f-4ba9-b95e-ffc93f935ab7)
+
+![Screenshot 2025-05-21 092931](https://github.com/user-attachments/assets/f9026809-733b-4fc1-9c1b-a0f084e34f04)
 
 
 ---
 
 ## 🧾 License
 
-This project is open-source and free to use for educational purposes.
+This project is open-source and free for educational use.
 
 ---
+
+## 💬 Questions?
+
+If you encounter issues or have suggestions, feel free to raise them via GitHub Issues.
+
+```
