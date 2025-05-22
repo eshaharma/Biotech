@@ -30,19 +30,131 @@ A simple desktop-based Student Management System built using Java Swing. This GU
 
 ## 🚀 How to Run
 
-1. Make sure you have **Java 8 or higher** installed.
+To **run this Java Swing + MySQL-based Student Management System GUI** on your PC, follow this **step-by-step setup** process:
 
-2. Compile the Java file:
+---
 
-   ```bash
-   javac StudentManagementSystem.java
-   ```
+### ✅ **Step 1: Install Required Software**
 
-3. Run the application:
+1. **Install Java Development Kit (JDK)**
 
-   ```bash
-   java StudentManagementSystem
-   ```
+   * Download & install [JDK](https://www.oracle.com/java/technologies/javase-downloads.html) (preferably Java 8 or later).
+   * Set up `JAVA_HOME` and add JDK's `bin` folder to your system `PATH`.
+
+2. **Install an IDE (Optional but Recommended)**
+
+   * Use [IntelliJ IDEA](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/), or [NetBeans](https://netbeans.apache.org/) for easy development.
+
+3. **Install MySQL Server**
+
+   * Download & install [MySQL Community Edition](https://dev.mysql.com/downloads/mysql/).
+   * During setup, **note the root password** you set (you’ll need this later).
+   * Start MySQL Server using the MySQL Workbench or command-line tools.
+
+---
+
+### ✅ **Step 2: Create MySQL Database**
+
+1. Open **MySQL Workbench** or command-line terminal and run:
+
+```sql
+CREATE DATABASE student_db;
+USE student_db;
+```
+
+> ⚠️ No need to create tables manually — the code auto-generates them when it first runs.
+
+---
+
+### ✅ **Step 3: Setup JDBC Driver**
+
+1. Download the **MySQL JDBC driver** (`mysql-connector-java`):
+
+   * Get it from: [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
+
+2. **Add JDBC driver to your project**:
+
+   * **In IntelliJ**: File > Project Structure > Libraries > + Add the `.jar` file.
+   * **In Eclipse**: Right-click project > Build Path > Configure Build Path > Add External JARs > Select `.jar`.
+
+---
+
+### ✅ **Step 4: Create Your Java File**
+
+1. Copy the full Java code into a file called:
+   `StudentManagementSystem.java`
+
+2. Make sure it's in a folder on your system. This file contains everything (GUI, model, database operations).
+
+---
+
+### ✅ **Step 5: Update Database Credentials in Code**
+
+In the `StudentDAO` class, change:
+
+```java
+private static final String USER = "root";
+private static final String PASSWORD = "password"; // change this
+```
+
+➡️ Replace `"password"` with **your actual MySQL root password**.
+
+---
+
+### ✅ **Step 6: Compile & Run**
+
+If you're using an IDE:
+
+* Just **click Run** or use the green arrow button.
+
+If you're using command line:
+
+1. Navigate to your `.java` file directory.
+2. Compile it:
+
+```bash
+javac -cp .;mysql-connector-java-<version>.jar StudentManagementSystem.java
+```
+
+> Replace `<version>` with the actual JDBC jar version (e.g., `mysql-connector-java-8.0.33.jar`).
+
+3. Run it:
+
+```bash
+java -cp .;mysql-connector-java-<version>.jar StudentManagementSystem
+```
+
+---
+
+### ✅ **Step 7: First Launch**
+
+* When you run the program:
+
+  * It will prompt: *“Are you a teacher or student?”*
+  * If **teacher**, enter:
+
+    * Username: `admin`
+    * Password: `1234`
+  * If credentials are wrong, it defaults to student mode (read-only).
+
+---
+
+### ✅ **Troubleshooting Tips**
+
+* **JDBC Error**? Ensure JDBC jar is in classpath.
+* **Access Denied (SQL)**? Check MySQL username/password.
+* **"Table doesn't exist" error**? Try deleting and re-running the DB initialization.
+* **GUI not showing up**? Make sure `setVisible(true);` is called (it's there in your code implicitly via `JFrame` constructor).
+
+---
+
+### 🎉 You're Ready!
+
+Once running, you'll have a working Student Management System where you can:
+
+* Add/edit/delete student records
+* Store subject grades
+* Store data persistently using MySQL backend
 
 ---
 
@@ -71,9 +183,6 @@ A simple desktop-based Student Management System built using Java Swing. This GU
 
 ## 📸 Screenshots
 
-![image (1)](https://github.com/user-attachments/assets/9597434c-fa39-4fcc-b980-5fe339ad1faa)
-
-![image](https://github.com/user-attachments/assets/93af0eaf-5ba3-4c4a-ab4c-50ace8a566eb)
 
 
 ---
