@@ -47,7 +47,7 @@ student-management-system/
 
 ## 📊 Project Presentation
 
-The project presentation is included in the `presentation/` folder for detailed walkthroughs and demo slides.
+The project presentation is included in the `presentation/` folder for explanation of application features and operations.
 
 ---
 
