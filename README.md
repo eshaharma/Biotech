@@ -16,9 +16,6 @@ A GUI-based Java application for managing student records — designed to help t
 
 ## 🖼️ Screenshots
 
-> These screenshots are uploaded directly to GitHub for live display  
-> (Still keep a copy in your repo under `assets/screenshots/` for completeness)
-
 ### 🔐 Login Screen  
 ![login-screen png](https://github.com/user-attachments/assets/f1fe23b7-24de-4958-991e-27f0b510446f)
 
