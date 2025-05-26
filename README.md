@@ -73,19 +73,19 @@ The project presentation is included in the `presentation/` folder for detailed 
 3. Run the file
      ```Compile and run StudentManagementSystem.java```
 
-📸 Local Screenshots
+## 📸 Local Screenshots
 These screenshots are also available inside the project folder under assets/screenshots/, for offline access.
 
 ````
 assets/screenshots/login-screen.png  
 assets/screenshots/ui-main.png
 ````
-👨‍💻 Team:
+## 👨‍💻 Team:
 
 1. Krishnendra Singh Sengar
    B.Tech in Computer Science & Engineering
 2. Manjistha Chakraborthy
    B.Tech in Computer Science & Engineering
 
-📜 License
+## 📜 License
 This project is open-source and free to use for educational and personal learning purposes.
