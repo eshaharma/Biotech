@@ -20,10 +20,12 @@ A GUI-based Java application for managing student records — designed to help t
 > (Still keep a copy in your repo under `assets/screenshots/` for completeness)
 
 ### 🔐 Login Screen  
-![Login Screen](https://user-images.githubusercontent.com/your-uploaded-login-screen-link.png)
+![login-screen png](https://github.com/user-attachments/assets/f1fe23b7-24de-4958-991e-27f0b510446f)
+
 
 ### 🧾 Main Interface  
-![Main UI](https://user-images.githubusercontent.com/your-uploaded-ui-main-link.png)
+![ui-main png](https://github.com/user-attachments/assets/8a885155-4e92-4adb-a53a-84a9d11b9e28)
+
 
 ---
 
