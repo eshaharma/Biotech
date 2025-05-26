@@ -57,10 +57,31 @@ The project presentation is included in the `presentation/` folder for detailed 
 - Java (JDK 17 or above recommended)
 - Swing (Java GUI)
 - AWT
+- File-based storage using `.dat` files (no external database or JDBC)
 - IntelliJ IDEA / Eclipse (IDE)
 
 ---
 
+## 📋 Requirements
+
+Before running the project, make sure you have the following installed and set up on your machine:
+
+- **Java Development Kit (JDK)** version 17 or above  
+  _Download from [Oracle](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or [OpenJDK](https://openjdk.org/)_
+
+- **IDE (Optional but Recommended):** IntelliJ IDEA, Eclipse, or any Java-supporting IDE for easier development and execution.
+
+- **Git** (for cloning the repository)  
+  _Download and install from [Git SCM](https://git-scm.com/)_
+
+
+---
+
+## 💾 Data Storage & Persistence
+
+This project uses file-based storage with `.dat` files to persist student data locally. The application reads and writes student records directly to these files, eliminating the need for external database setup or JDBC connectivity. This approach keeps the system lightweight and easy to deploy, while ensuring data persists between sessions.
+
+---
 ## 🚀 How to Run the Project
 
 1. **Clone the repository**
@@ -73,6 +94,8 @@ The project presentation is included in the `presentation/` folder for detailed 
 3. Run the file
      ```Compile and run StudentManagementSystem.java```
 
+---
+
 ## 📸 Local Screenshots
 These screenshots are also available inside the project folder under assets/screenshots/, for offline access.
 
@@ -80,12 +103,26 @@ These screenshots are also available inside the project folder under assets/scre
 assets/screenshots/login-screen.png  
 assets/screenshots/ui-main.png
 ````
-## 👨‍💻 Team:
+---
+
+## 🔮 Future Improvements
+
+- Integration with a relational database (MySQL, SQLite) using JDBC for scalable data management.
+- Implement DAO pattern for cleaner code separation and easier maintenance.
+- Enhance UI responsiveness and add more analytics features.
+
+---
+
+## 👨‍💻 Team
 
 1. Krishnendra Singh Sengar
    B.Tech in Computer Science & Engineering
 2. Manjistha Chakraborthy
    B.Tech in Computer Science & Engineering
 
+---
+
 ## 📜 License
 This project is open-source and free to use for educational and personal learning purposes.
+
+---
