@@ -1,118 +1,91 @@
-# 🧑‍🎓 Student Management System (Java Swing)
+# 🎓 Student Management System (Java)
 
-A simple desktop-based Student Management System built using Java Swing. This GUI application allows teachers to manage student records with subject-wise grades for Maths, Physics, and Chemistry. It supports secure teacher login and saves data locally using file-based serialization.
+A GUI-based Java application for managing student records — designed to help track, view, and evaluate academic data with ease. Built with Swing, it's lightweight, fast, and easy to use.
 
 ---
 
-## 💡 Features
+## ✨ Features
 
-- **Role-based access:**
-  - 👨‍🏫 **Teacher mode**: Add, edit, delete, and save student records.
-  - 👨‍🎓 **Student mode**: View-only access to student records.
-- 🔐 Secure teacher login (Username: `admin`, Password: `1234`)
-- 📊 Subject-wise grade entry and display
-- 💾 Persistent storage using `students.dat` (Java object serialization)
-- 🖥️ Simple and intuitive Java Swing GUI
+- Add new students with name, roll number, and marks
+- View all students in a dynamic table
+- Search by roll number
+- Calculate average marks
+- Display grade distribution
+
+---
+
+## 🖼️ Screenshots
+
+> These screenshots are uploaded directly to GitHub for live display  
+> (Still keep a copy in your repo under `assets/screenshots/` for completeness)
+
+### 🔐 Login Screen  
+![Login Screen](https://user-images.githubusercontent.com/your-uploaded-login-screen-link.png)
+
+### 🧾 Main Interface  
+![Main UI](https://user-images.githubusercontent.com/your-uploaded-ui-main-link.png)
+
+---
+
+## 📁 Project Structure
+
+This repository follows a clean, professional layout with a **single main branch** containing all necessary project files organized in folders:
+````
+student-management-system/
+├── src/
+│ ├── Student.java
+│ └── StudentManagementSystem.java
+├── assets/
+│ └── screenshots/
+│ ├── login-screen.png
+│ └── ui-main.png
+├── presentation/
+│ └── student-management-system-presentation.pptx
+├── README.md
+└── resources/ (optional)
+
+````
+
+## 📊 Project Presentation
+
+The project presentation is included in the `presentation/` folder for detailed walkthroughs and demo slides.
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Java SE 8+ (Core Java + Swing for GUI)
-- Java Object Serialization (`ObjectOutputStream`, `ObjectInputStream`)
-- Java Collections (`ArrayList`, `HashMap`)
+- Java (JDK 17 or above recommended)
+- Swing (Java GUI)
+- AWT
+- IntelliJ IDEA / Eclipse (IDE)
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run the Project
 
-### ✅ Step 1: Install Java
+1. **Clone the repository**
+   ```
+   git clone https://github.com/your-username/student-management-system.git
+   cd student-management-system
+   ```
+2. Open the project in IntelliJ IDEA or Eclipse
 
-- Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) (version 8 or above).
-- Make sure Java is added to your system `PATH`.
+3. Run the file
+     ```Compile and run StudentManagementSystem.java```
 
-### ✅ Step 2: Compile the Code
+📸 Local Screenshots
+These screenshots are also available inside the project folder under assets/screenshots/, for offline access.
 
-Navigate to the directory where `StudentManagementSystem.java` is located and run:
-
-```bash
-javac StudentManagementSystem.java
 ````
+assets/screenshots/login-screen.png  
+assets/screenshots/ui-main.png
+````
+👨‍💻 Team:
 
-### ✅ Step 3: Run the Application
+1. Krishnendra Singh Sengar
+   B.Tech in Computer Science & Engineering
+2. Manjistha Chakraborthy
+   B.Tech in Computer Science & Engineering
 
-```bash
-java StudentManagementSystem
-```
-
-Or simply click **Run** in your IDE (IntelliJ, Eclipse, etc.).
-
----
-
-## 🧪 Usage Guide
-
-1. On launch, select your role: **Teacher** or **Student**.
-2. **Teacher Mode**:
-
-   * Login with credentials:
-
-     * Username: `admin`
-     * Password: `1234`
-   * You can now add, edit, delete, and save student records.
-3. **Student Mode**:
-
-   * Access is read-only.
-   * Students can view the grades but cannot make changes.
-
----
-
-## 📂 File Structure
-
-```
-├── StudentManagementSystem.java
-└── students.dat   # (auto-generated after saving student data)
-```
-
----
-
-## 🔐 Admin Credentials
-
-| Role    | Username | Password |
-| ------- | -------- | -------- |
-| Teacher | `admin`  | `1234`   |
-
-*Incorrect credentials will result in student (read-only) mode.*
-
----
-
-## 📌 Notes
-
-* `students.dat` is created in the project folder to store student records persistently.
-* If the file is deleted, data will be lost.
-* All functionality (adding, saving, etc.) is disabled in student mode.
-* Designed for small-scale, local use only.
-
----
-
-## 📸 Screenshots
-
-
-![image (1)](https://github.com/user-attachments/assets/22e0d014-a6bd-4268-8322-eb6b270f2ae3)
-
-
-![Screenshot 2025-05-21 092931](https://github.com/user-attachments/assets/a649d6d3-4d8e-4ed3-8522-2930b4a5bd93)
-
-
----
-
-## 🧾 License
-
-This project is open-source and free to use for educational or personal learning purposes.
-
----
-
-## 🤝 Contributions
-
-Pull requests are welcome! If you’d like to add features or refactor the codebase, feel free to fork and submit a PR.
-
----
+📜 License
+This project is open-source and free to use for educational and personal learning purposes.
