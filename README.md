@@ -4,7 +4,7 @@ A GUI-based Java application for managing student records — designed to help t
 
 ---
 
-## ✨ Features
+## ✨ Features of the application
 
 - Add new students with name, roll number, and marks
 - View all students in a dynamic table
