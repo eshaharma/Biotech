@@ -114,9 +114,9 @@ assets/screenshots/ui-main.png
 
 ## 👨‍💻 Team
 
-1. Krishnendra Singh Sengar
+1. Krishnendra Singh Sengar -
    B.Tech in Computer Science & Engineering
-2. Manjistha Chakraborthy
+2. Manjistha Chakraborthy -
    B.Tech in Computer Science & Engineering
 
 ---
