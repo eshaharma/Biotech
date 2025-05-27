@@ -1,4 +1,4 @@
-# 🎓 Student Management System (Java)
+# 🎓 Biotech Student Management System (Java)
 
 A GUI-based Java application for managing student records — designed to help track, view, and evaluate academic data with ease. Built with Swing, it's lightweight, fast, and easy to use.
 
