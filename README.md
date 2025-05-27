@@ -112,10 +112,14 @@ assets/screenshots/ui-main.png
 
 ## 👨‍💻 Team
 
-1. Krishnendra Singh Sengar -
-   B.Tech in Computer Science & Engineering
-2. Manjistha Chakraborthy -
-   B.Tech in Computer Science & Engineering
+1. Kshitiz -
+   B.Tech in Biotechnology
+2. Esha Eharma -
+   B.Tech in Biotechnology
+3. Suryansh Pratap Singh -
+   B.Tech in Biotechnology
+4. Gyanendra Pandey -
+   B.Tech in Biotechnology    
 
 ---
 
