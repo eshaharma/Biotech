@@ -41,7 +41,6 @@ student-management-system/
 ├── presentation/
 │ └── student-management-system-presentation.pptx
 ├── README.md
-
 ````
 
 ## 📊 Project Presentation
